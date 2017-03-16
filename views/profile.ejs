@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Please Login</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="/css/profile.css" rel="stylesheet" type="text/css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/css/xeditable.css" rel="stylesheet">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/js/xeditable.js"></script>
+   <script src="/edit.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+        <br>
+        <p class=" text-info">March 17/3/2017</p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Welcome to my Profile</h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center"> <img style="width: 60%;" alt="User Pic" src="//i.imgur.com/u0owD6A.png"> </div>
+
+              <div ng-app="app" ng-controller="Ctrl">
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>First Name:</td>
+                        <td><a href="#" editable-search="user.search">{{ user.search || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Last Name:</td>
+                        <td><a href="#" editable-search="user.search">{{ user.search || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Card Number:</td>
+                        <td><a href="#" editable-search="user.color" e-pattern="\d{9}" e-title="1-9">{{ user.color || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Email:</td>
+                        <td><a href="#" editable-email="user.email">{{ user.email || 'empty' }}</a></td>
+                      </tr>
+                      <tr>
+                        <tr>
+                          <td>Mobile Number:</td>
+                          <td><a href="#" editable-tel="user.tel"  e-pattern="\d{3}-\d{2}-\d{2}" e-title="xxx-xx-xx" >{{ user.tel || 'empty' }}</a></td>
+                        </tr>
+                        <tr>
+                          <td>Gender</td>
+                          <td>
+                            <div ng-controller="RadiolistCtrl">
+                              <a href="#" editable-radiolist="user.status" e-ng-options="s.value as s.text for s in ::statuses track by s.value">
+                       {{ showStatus() }}
+                       </a>
+                            </div>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+
+                  <a href="#" class="btn btn-primary">Edit Profile</a>
+                  <a href="#" class="btn btn-primary">Show Address</a>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <a data-original-title="Broadcast Message" data-toggle="tooltip" type="button" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-envelope"></i></a>
+
+              <span class="pull-right">
+                            <a href="#" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i></a>
+
+                            <a data-original-title="Remove this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-remove"></i></a>
+
+                        </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
