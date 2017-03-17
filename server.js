@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const model = require("./models/registration");
-const model = require("./models/address");
+const model2 = require("./models/address");
 const routes = require('./routes/routes');
 
 app.set("port", process.env.PORT || 8080);
