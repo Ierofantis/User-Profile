@@ -22,12 +22,12 @@ You can se my app live on https://registration-form.herokuapp.com/
 # Documentation
 # User Stories
 
-1)Landing Page(Login Page)
+1) Landing Page(Login Page)
 
 You will sumbit the form with the following credentials:John & 1234(placeholders).
 If the credentials are false then the user will not redirect to the user's profile page
 
-2)Profile page
+2) Profile page
 
 The user profile page will show the user available fields, such as:
 
@@ -49,18 +49,18 @@ the user's address information.
 Initially the fields are empty but when you fill them then you can click the Update My Address button and then 
 the the data is going to be saved on a database(there is no database at the moment) and the user will see his address on the map.
 
-3)Database and MVC
+3) Database and MVC
 
 At the moment there is no database but I have add the two main Schemas on the Models folder.
 For scalability reasons I 've used MVC architecture.
 
-5)Cross Browsing Test
+5) Cross Browsing Test
 
 This app is tested and working on:
 
 Internet Explorer, Mozzilla Firefox, Chrome, Opera, Safari
 
-4)Tools
+4) Tools
 
 I have used ExpressJs for backend and EJS template engine,Angular,Vanilla JS and jQuery for the frontend.
 
