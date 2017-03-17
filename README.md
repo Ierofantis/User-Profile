@@ -55,11 +55,13 @@ and the user will see his address on the map.
 At the moment there is no database but I have add the two main Schemas on the Models folder.
 For scalability reasons I 've used MVC architecture.
 
-5) Cross Browsing Test
+5) Cross Browsing Test and Responsiveness
 
 This app is tested and working on:
 
 Internet Explorer, Mozzilla Firefox, Chrome, Opera, Safari
+
+and It's fully responsive
 
 4) Tools
 
