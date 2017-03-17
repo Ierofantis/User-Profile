@@ -10,10 +10,10 @@ If you want to test the app locally then download the zip file from this reposit
 unzip it on your PC and then open your command line on the specific location that you 've
 unzipped the folder.
 
-Then run npm install(Make sure that you have installed on your PC npm and node) to install 
+Then run npm install(make sure that you have installed on your PC the latest versions of npm and node) to install 
 the modules from package.json
 
-When the installation is over then type on your command line node server or simply nodemon
+When the installation is over then type on your command line: node server or simply nodemon
 
 # Review the app globally
 
@@ -24,7 +24,7 @@ You can se my app live on https://registration-form.herokuapp.com/
 
 1) Landing Page(Login Page)
 
-You will sumbit the form with the following credentials:John & 1234(placeholders).
+The user has to sumbit the form with the following credentials:John & 1234(placeholders).
 If the credentials are false then the user will not redirect to the user's profile page
 
 2) Profile page
@@ -46,8 +46,9 @@ format is wrong.
 For the moment the buttons are not active Except the Show Address button that shows a modal dialog with 
 the user's address information.
 
-Initially the fields are empty but when you fill them then you can click the Update My Address button and then 
-the the data is going to be saved on a database(there is no database at the moment) and the user will see his address on the map.
+Initially the fields are empty but when the user fill them then he can click the Update My Address button and 
+the data is going to be saved on a database(there is no database at the moment but this is the main concept) 
+and the user will see his address on the map.
 
 3) Database and MVC
 
