@@ -31,12 +31,12 @@ If the credentials are false then the user will not redirect to the user's profi
 
 The user profile page will show the user available fields, such as:
 
-•	First name
-•	Last name
-•	Card number (assume that the users have a unique 9-digit card number)
-•	Email
-•	Mobile number
-•	Gender
+* First name
+*	Last name
+*	Card number (assume that the users have a unique 9-digit card number)
+*	Email
+*	Mobile number
+*	Gender
 
 If the user click on any field(link) of the form he can update the static information.
 
