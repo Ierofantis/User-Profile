@@ -4,7 +4,7 @@ An interface made on Express.js, Angular, Ejs, Bootstrap and JS
 
 ![alt tag](https://i.imgur.com/T7ZfZvs.jpg)
 
-#Review the app locally
+# Review the app locally
 
 If you want to test the app locally then download the zip file from this repository
 unzip it on your PC and then open your command line on the specific location that you 've
@@ -15,7 +15,7 @@ the modules from package.json
 
 When the installation is over then type on your command line node server or simply nodemon
 
-#Review the app globally
+# Review the app globally
 
 You can se my app live on https://registration-form.herokuapp.com/
 
