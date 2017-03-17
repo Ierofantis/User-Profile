@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Welcome!</title>
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link href="/css/profile.css" rel="stylesheet" type="text/css">
+  <link href="/css/map.css" rel="stylesheet" type="text/css">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/css/xeditable.css" rel="stylesheet">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/js/xeditable.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
+  <script src="//maps.google.com/maps/api/js?sensor=false"></script> 
+
+  <script src="/address.js"></script>
+  <script src="js/geocoder.js"></script> 
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
+        <br>
+        <p class=" text-info"></p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"></h3>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center"></div>
+
+              <div ng-app="app" ng-controller="Ctrl">
+                <div class=" col-md-9 col-lg-9 ">
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Address:</td>
+                        <td><a id="address_geo" href="#" editable-search="user.address"
+                        onaftersave="codeAddress(user)">{{ user.address || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Post Code:</td>
+                        <td><a href="#" editable-search="user.post_code" e-pattern="\d{3}-\d{2}" e-title="xxx-xx">{{ user.post_code || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>City:</td>
+                        <td><a href="#" editable-search="user.city">{{ user.city || 'empty' }}
+                        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Country:</td>
+                        <td><a href="#" editable-search="user.country">{{ user.country || 'empty' }}</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div>
+                  <a href="#" onclick="codeAddress()" class="btn btn-primary">Update My Address</a>   
+                  </div>               
+                  <body onload="initialize()">                 
+                  <div id="map"  style="position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"></div>                 
+                </div>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

@@ -3,13 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Please Login</title>
+  <title>Welcome!</title>
+
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.css"> 
   <link href="/css/profile.css" rel="stylesheet" type="text/css">
+  <link href="/css/map.css" rel="stylesheet" type="text/css">
   <link href="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/css/xeditable.css" rel="stylesheet">
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.6.0/js/xeditable.js"></script>
-   <script src="/edit.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  <script src="/edit.js"></script>
+  <script src="/js/editprofile.js"></script>
+  
 </head>
 
 <body>
@@ -36,19 +45,19 @@
                     <tbody>
                       <tr>
                         <td>First Name:</td>
-                        <td><a href="#" editable-search="user.search">{{ user.search || 'empty' }}
+                        <td><a href="#" editable-search="user.First">{{ user.First || 'empty' }}
                         </a>
                         </td>
                       </tr>
                       <tr>
                         <td>Last Name:</td>
-                        <td><a href="#" editable-search="user.search">{{ user.search || 'empty' }}
+                        <td><a href="#" editable-search="user.Last">{{ user.Last || 'empty' }}
                         </a>
                         </td>
                       </tr>
                       <tr>
                         <td>Card Number:</td>
-                        <td><a href="#" editable-search="user.color" e-pattern="\d{9}" e-title="1-9">{{ user.color || 'empty' }}
+                        <td><a href="#" editable-search="user.card" e-pattern="\d{9}" e-title="1-9">{{ user.card || 'empty' }}
                         </a>
                         </td>
                       </tr>
@@ -75,7 +84,7 @@
                   </table>
 
                   <a href="#" class="btn btn-primary">Edit Profile</a>
-                  <a href="#" class="btn btn-primary">Show Address</a>
+                  <a class="btn btn-primary" id="showAddress" >Show Address</a>
                 </div>
               </div>
             </div>

@@ -5,13 +5,12 @@ app.run(function(editableOptions) {
 });
 
   app.controller('Ctrl', function($scope) {
-  $scope.user = {
+  $scope.user = { 
+    First: 'John',
+    Last:'Hogan',
+    card: '123456789',
     email: 'john@gmail.com',
-    tel: '123-45-67',
-    number: '123-45-67',    
-    url: 'http://example.com',
-    search: 'John',
-    color: '123456789'       
+    tel: '123-45-67'     
   };  
 });
 
