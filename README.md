@@ -17,7 +17,7 @@ When the installation is over then type on your command line: node server or sim
 
 # Review the app globally
 
-You can se my app live on https://registration-form.herokuapp.com/
+You can test my app live on https://registration-form.herokuapp.com/
 
 # Documentation
 # User Stories
